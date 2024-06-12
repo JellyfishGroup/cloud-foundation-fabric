@@ -18,7 +18,7 @@ variable "billing_account" {
   description = "Billing account id. If billing account is not part of the same org set `is_org_level` to `false`. To disable handling of billing IAM roles set `no_iam` to `true`."
   type = object({
     id           = string
-    is_org_level = optional(bool, true)
+    is_org_level = optional(bool, false)
     no_iam       = optional(bool, false)
   })
   nullable = false
